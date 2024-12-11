@@ -1,0 +1,197 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: url('1.png') no-repeat center center fixed;  /* Set the background image */
+    background-size: cover;  /* Ensure the image covers the entire background */
+    background-position: center;
+}
+
+body {
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: transparent;
+}
+
+.header .logo {
+    font-size: 2.5em;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+}
+
+.nav a {
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+    padding: 5px 10px;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* About Section Styles */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: transparent;  /* Semi-transparent overlay */
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    min-height: 100vh;  /* Ensure this section takes up at least the full viewport */
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+    z-index: 2;
+}
+
+.about-left, .about-right {
+    flex: 1;
+    padding: 20px;
+    background: transparent;  /* Slight transparent background to read text */
+    border-radius: 10px;
+}
+
+.about-left h2, .about-right h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-left p, .about-right p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-left {
+    text-align: left;
+}
+
+.about-right {
+    text-align: left;
+}
+
+/* Our Team Section Styles */
+.team {
+    padding: 50px 20px;
+    text-align: center;
+    background: transparent;  /* Slight overlay on the team section */
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.team h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    width: 250px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; 
+        gap: 30px;
+    }
+
+    .about-left, .about-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-left h2, .about-right h2 {
+        font-size: 2.5em;
+    }
+
+    .about-left p, .about-right p {
+        font-size: 1.1em;
+    }
+
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+    }
+}

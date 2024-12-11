@@ -1,0 +1,36 @@
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    
+    const fullName = document.getElementById('fname').value.trim();
+    const password = document.getElementById('pass').value;
+    const confirmPassword = document.getElementById('confirmPass').value;
+
+    // Validate full name
+    const nameParts = fullName.split(' ');
+    if (nameParts.length < 2) {
+        alert('Please enter your full name (first and last name).');
+        return; // Stop further execution
+    }
+
+    // Validate password
+    const uppercasePattern = /[A-Z]/;
+    if (!uppercasePattern.test(password)) {
+        alert('Password must contain at least one uppercase letter.');
+        return; // Stop further execution
+    }
+
+    if (password.length < 3 || password.length > 12) {
+        alert('Password must be between 3 and 12 characters long.');
+        return; // Stop further execution
+    }
+
+    // Validate confirm password
+    if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return; // Stop further execution
+    }
+
+    // If all validations pass, submit the form
+    alert('Registration successful!');
+    this.submit(); // Submit the form
+});

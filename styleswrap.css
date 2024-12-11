@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('1.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Maximum width for the container */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background: transparent; /* Semi-transparent background for better visibility */
+    border: 1px solid white;
+    box-sizing: border-box;
+    color: white;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left for consistency */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 15px; /* Added more space above the label for consistency */
+    font-weight: lighter; /* Make label text bold */
+    font-size: 14px;
+    width: 100%; /* Ensures labels take full width */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Ensures input includes padding/border in width */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none;
+}
+
+button {
+    background-color: #5f0e0e; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%; /* Button takes full width of the container */
+    text-align: center; /* Center text in button */
+}
+
+button:hover {
+    background-color: #8b0000; /* Darker red on hover for consistency */
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

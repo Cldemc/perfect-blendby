@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Blend</title>
+    <link rel="stylesheet" href="menu.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <ion-icon name="cafe-outline"></ion-icon>Perfect Blend
+        </a>
+        
+        <nav class="nav">
+            <a href="home.htm">Home</a>
+            <a href="abiut.htm">About</a>
+            <a href="menu.htm">Menu</a>
+            <a href="contact.htm">Contact</a>
+            <a href="cart.htm" class="cart-link">
+                <ion-icon name="cart-outline"></ion-icon>
+                <span id="cart-count">0</span> <!-- Add this span for the cart count -->
+            </a>
+            
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="content">
+            <!-- Removed h2 and p elements as per request -->
+        </div>
+
+        <!-- Menu Section with 20 Products -->
+        <section class="menu-section">
+            <div class="menu-container">
+                <!-- Repeat this for all 20 products, each product has an 'Add to Cart' button -->
+                <div class="menu-item">
+                    <img src="espre.webp" alt="Product 1">
+                    <h3>Espresso</h3>
+                    <p>$5.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Espresso', 5.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="latte.webp" alt="Product 2">
+                    <h3>Latte</h3>
+                    <p>$10.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Latte', 6.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="con.webp" alt="Product 3">
+                    <h3>Espresso Con Panna</h3>
+                    <p>$8.50</p>
+                    <button class="add-to-cart" onclick="addToCart('Espresso Con Panna', 5.50)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="mac.webp" alt="Product 4">
+                    <h3>Macchiato</h3>
+                    <p>$6.50</p>
+                    <button class="add-to-cart" onclick="addToCart('Macchiato', 4.50)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="moc.webp" alt="Product 5">
+                    <h3>Mocha</h3>
+                    <p>$6.50</p>
+                    <button class="add-to-cart" onclick="addToCart('Mocha', 6.50)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="iced.webp" alt="Product 6">
+                    <h3>Iced Tea</h3>
+                    <p>$5.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Iced Tea', 5.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="cold.webp" alt="Product 7">
+                    <h3>Cold Brew</h3>
+                    <p>$4.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Cold Brew', 4.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="coff.webp" alt="Product 8">
+                    <h3>Iced Coffee</h3>
+                    <p>$5.50</p>
+                    <button class="add-to-cart" onclick="addToCart('Iced Coffee', 5.50)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="car.webp" alt="Product 9">
+                    <h3>Iced Caramel Macchiato</h3>
+                    <p>$9.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Iced Caramel Macchiato', 5.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="ice.webp" alt="Product 10">
+                    <h3>Coffee Iced Chocolate</h3>
+                    <p>$11.50</p>
+                    <button class="add-to-cart" onclick="addToCart('Coffee Iced Chocolate', 5.50)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="berry.webp" alt="Product 11">
+                    <h3>Cherry Cupcake</h3>
+                    <p>$9.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Cherry Cupcake', 5.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="brow.webp" alt="Product 12">
+                    <h3>Chocolate Brownie</h3>
+                    <p>$8.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Chocolate Brownie', 4.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="chip.webp" alt="Product 13">
+                    <h3>Chocolate Chip Cookies</h3>
+                    <p>$6.50</p>
+                    <button class="add-to-cart" onclick="addToCart('Chocolate Chip Cookies', 5.50)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="cake.webp" alt="Product 14">
+                    <h3>Chocolate Cake</h3>
+                    <p>$9.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Chocolate Cake', 5.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="rain.webp" alt="Product 15">
+                    <h3>Rainbow Cake</h3>
+                    <p>$10.50</p>
+                    <button class="add-to-cart" onclick="addToCart('Rainbow Cake', 5.50)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="wich.webp" alt="Product 16">
+                    <h3>Club Sandwich</h3>
+                    <p>$6.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Club Sandwich', 5.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pas.webp" alt="Product 17">
+                    <h3>Pastries</h3>
+                    <p>$5.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Pastries', 4.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="italy.png" alt="Product 18">
+                    <h3>Italian Fettucine Pasta</h3>
+                    <p>$5.50</p>
+                    <button class="add-to-cart" onclick="addToCart('Italian Fettucine Pasta', 5.50)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="don.webp" alt="Product 19">
+                    <h3>Donuts</h3>
+                    <p>$5.00</p>
+                    <button class="add-to-cart" onclick="addToCart('Donuts', 5.00)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="san.png" alt="Product 20">
+                    <h3>Croissant</h3>
+                    <p>$5.50</p>
+                    <button class="add-to-cart" onclick="addToCart('Croissant', 5.50)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        // Add to Cart function
+function addToCart(productName, price) {
+    // For now, just log the product name and price to console
+    console.log(`Added to cart: ${productName} - $${price}`);
+    
+    // Optionally, you can store the cart items in the browser's localStorage or sessionStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name: productName, price: price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Update the cart icon with the number of items in the cart
+    updateCartCount();
+}
+
+// Function to update the cart count
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartCount = cart.length;
+    // Update the count on the cart icon
+    document.querySelector('.cart-link #cart-count').textContent = cartCount;
+}
+
+// Initialize cart count on page load
+window.onload = function() {
+    updateCartCount();
+};
+
+    </script>
+</body>
+</html>
